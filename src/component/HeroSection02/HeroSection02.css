@@ -1,0 +1,107 @@
+/* HeroSection02.css */
+
+
+
+/* Main container styling */
+.main02 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 2rem;
+    gap: 30px;
+    background-color: black;
+}
+
+/* Left section styling */
+.left02 {
+    width: 70vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.left02 h1 {
+    font-size: 8rem;
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.left02 img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.bottomtext {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.no {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.bottomtextgrp {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Right section styling */
+.right02 {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.right02 img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 930px) {
+    .main02 {
+        padding: 2rem;
+    }
+
+    .left02, .right02 {
+        width: 100%;
+    }
+
+    .left02 h1 {
+        font-size: 3rem;
+    }
+
+    .bottomtext {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .no {
+        font-size: 1.5rem;
+    }
+
+    .bottomtextgrp {
+        font-size: 1rem;
+    }
+}

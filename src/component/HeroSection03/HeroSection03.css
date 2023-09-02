@@ -1,0 +1,87 @@
+/* Herosection.css */
+
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&family=Ubuntu:wght@500&display=swap");
+
+/* Main container styling */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f7fa;
+    padding: 2rem;
+    height: 100vh;
+    background-color: black;
+    gap: 70px;
+}
+
+
+
+.left03 h1 {
+    font-weight: 700;
+    font-size: 3rem;
+
+}
+.left03 p {
+    font-size: 1.4rem;
+}
+
+
+
+.web1 img:hover {
+    transform: scale(1.05);
+}
+
+
+
+.right03 h1 {
+    font-family: "Ubuntu", sans-serif;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.right03 p {
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
+    color: #6b7280;
+}
+.right03 img{
+    margin-top: 16px;
+}
+.right03  ul li {
+    list-style-type: disc !important;
+    font-size: 1.5rem;
+    padding: 2px;
+}
+/* Mobile responsive adjustments */
+/* Mobile responsive adjustments */
+@media (max-width: 930px) {
+    .main {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 30px;
+        height: auto;
+    }
+
+    .left03, .right03 {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .left03 h1 {
+        font-size: 2.5rem;
+    }
+
+    .left03 p {
+        font-size: 1.2rem;
+    }
+
+    .right03 h1 {
+        font-size: 2.5rem;
+    }
+
+    .right03 p {
+        font-size: 1.1rem;
+    }
+}

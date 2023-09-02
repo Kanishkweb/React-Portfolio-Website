@@ -1,0 +1,56 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+.scroll-nav {
+    background-color: black;
+    color: white;
+    padding: 20px 30px 10px 14px;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
+  .scroll-nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .scroll-nav li {
+    font-size: 18px;
+    border: 2px solid white;
+    border-radius: 18px;
+    background-color: #fff;
+    color: black;
+    font-weight: 800;
+  }
+
+  .scroll-nav li:hover {
+    background-color: greenyellow;
+    color: black;
+  }
+  
+  /* Hover effect with transition animation */
+  .scroll-nav button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    color: black;
+    font-weight: 600;
+    margin: 2px 10px 2px 6px;
+  }
+  
+  .scroll-nav button:hover {
+    color: #28a745; 
+    background-color: greenyellow;
+    color: black;
+  }
+  
+
+  @media(max-width:786px){
+    .scroll-nav ul {
+        gap:15px
+    }
+    .scroll-nav ul button {
+        margin: 0px 0px -25px 1px;
+    }
+  }
