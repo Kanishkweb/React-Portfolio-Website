@@ -20,9 +20,9 @@ function ScrollNavigation() {
         <li>
           <button onClick={() => scrollToSection("section5")}>Resume</button>
         </li>
-        <li>
+        {/* <li>
           <button onClick={() => scrollToSection("section2")}>Experince</button>
-        </li>
+        </li> */}
         <li>
           <button onClick={() => scrollToSection("section3")}>Skills</button>
         </li>
