@@ -3,8 +3,6 @@
 /* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&family=Ubuntu:wght@500&display=swap");
 
-
-
 /* Main container styling */
 .main {
   display: flex;
@@ -15,16 +13,9 @@
   height: 100%;
   overflow: hidden;
   padding-top: 40px;
-
+  padding: 4rem;
+  /* position: relative; */
 }
-
-
-
-.animate-fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 
 /* Left section styling */
 .left01 {
@@ -32,6 +23,9 @@
   flex-direction: column;
   align-items: center; /* Center content horizontally */
   padding-left: 1rem;
+  opacity: 0;
+  /* apply when the text is running */
+  /* width: 730px; */
 }
 
 /* Heading styling */
@@ -42,6 +36,31 @@
   font-family: "Roboto", sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   line-height: 1.1;
+  /* to make an effect on the heading */
+}
+
+@keyframes fadeInAndScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  70% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animated {
+  animation: fadeInAndScale 1s ease-in-out forwards;
+}
+
+.animate-fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Image container styling */
@@ -62,6 +81,7 @@
   display: flex;
   flex-direction: column;
   gap: 10vmax;
+  opacity: 0;
 }
 
 .right01 h1 {
@@ -75,6 +95,53 @@
   font-family: "Roboto", sans-serif;
   letter-spacing: 2px;
   padding-bottom: 10px;
+  opacity: 0;
+}
+
+/* Other text animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mernStack {
+  animation:  fadeInLeft 2s ease-in-out forwards;
+}
+
+.description {
+  animation:  fadeInUp 2s ease-in-out forwards;
+}
+
+
+
+
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* For example, slide up effect */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 /* Mobile responsive adjustments */
 @media (max-width: 940px) {
@@ -83,14 +150,14 @@
   }
 
   .left01 {
-    padding: 2rem 0;
+    padding: 2rem 1rem;
   }
   .left01 h1 br {
     display: none;
   }
 
   .heading01 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .web1 {
     padding: 0px 5px 0px 5px;
@@ -100,8 +167,9 @@
   }
 
   .right01 {
-    padding: 2rem 0;
+    padding: 2rem 1rem;
   }
 }
+
 
 

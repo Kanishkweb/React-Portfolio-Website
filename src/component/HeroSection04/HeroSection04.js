@@ -1,10 +1,12 @@
 import React from "react";
 import "./HeroSection04.css";
+import useAnimateOnMount from "../AnimateOnMount/animateOnMount";
 
 const HeroSection04 = () => {
+  const {showAnimation,sectionRef} = useAnimateOnMount()
   return (
-    <div className="main04" id="section4">
-      <div className="left04">
+    <div className="main04" id="section4" ref={sectionRef}>
+      <div className={`left04 ${showAnimation ? "animated" : ""}`}>
         <h1>
           GET IN
           <br />
@@ -53,7 +55,7 @@ const HeroSection04 = () => {
           </div>
         </div>
       </div>
-      <div className="right04">
+      <div className={`right04 ${showAnimation ? "animated" : ""}`}>
         <img alt="Get in touch" src="Images/getintouch.jpg" />
       </div>
     </div>

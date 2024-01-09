@@ -1,17 +1,37 @@
 /* Resume.css */
 
+/* Glowing effect to text h1 */
+
+
+
+.animated-text {
+  animation: changeText 3s forwards;
+}
+
+@keyframes changeText {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 .mainrs {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding: 20px;
+  padding: 2rem 4rem;
   background-color: black;
   color: white;
   transition: all 0.5s;
 }
-
 
 .leftrs {
   width: 100%;
@@ -20,6 +40,7 @@
   padding: 20px;
   background-color: black; /* Background color for the left section */
   color: white;
+  opacity: 0;
 }
 
 .leftrs h1 {
@@ -61,6 +82,7 @@
 .rightrs {
   width: 100%;
   max-width: 400px;
+  opacity: 0;
 }
 
 .resume-image {
@@ -83,5 +105,11 @@
   .leftrs {
     width: 100%;
     max-width: none;
+  }
+  .leftrs h1{
+    font-size: 2rem;
+  }
+  .leftrs a{
+    font-size: 1rem;
   }
 }

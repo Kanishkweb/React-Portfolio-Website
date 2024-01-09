@@ -1,56 +1,103 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 .scroll-nav {
-    background-color: black;
-    color: white;
-    padding: 20px 30px 10px 14px;
-    font-family: 'Ubuntu', sans-serif;
+  background-color: black;
+  color: white;
+  padding: 2rem 4rem;
+  font-family: "Ubuntu", sans-serif;
+  position: relative;
+  height: 10vh;
+}
+
+.scroll-nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+  position: absolute;
+  left: 6vw;
+}
+
+.scroll-nav li {
+  font-size: 18px;
+  border-radius: 18px;
+
+  color: black;
+  font-weight: 800;
+}
+
+.scroll-nav li:hover {
+  color: black;
+}
+
+/* Hover effect with transition animation */
+.scroll-nav button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  color: black;
+  font-weight: 600;
+  margin: 2px 10px 2px 6px;
+}
+
+.scroll-nav button:hover {
+  color: black;
+}
+
+/* Appliying css for the navigation button  */
+
+.scroll-nav ul li button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  background-color: #ff6f69;
+  color: #ffffff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.scroll-nav ul li button:hover {
+  transform: rotate(-10deg) scale(1.1);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.scroll-nav ul li button:active {
+  transform: rotate(0) scale(1);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ScrollNavigation.css */
+
+.animate {
+  /* Define your animation properties here */
+  animation: slideInAnimation 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* cubic berizer animation  */
+@keyframes slideInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.8);
   }
-  
+  50% {
+    opacity: 1;
+    transform: translateY(0) scale(1.1);
+  }
+  to {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 786px) {
   .scroll-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    gap: 30px;
+    gap: 8px;
   }
-  
-  .scroll-nav li {
-    font-size: 18px;
-    border: 2px solid white;
-    border-radius: 18px;
-    background-color: #fff;
-    color: black;
-    font-weight: 800;
+  .scroll-nav ul button {
+    margin: 0px 0px -25px 1px;
   }
-
-  .scroll-nav li:hover {
-    background-color: greenyellow;
-    color: black;
+  .scroll-nav ul li button {
+    font-size: 12px;
   }
-  
-  /* Hover effect with transition animation */
-  .scroll-nav button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    transition: color 0.3s ease-in-out;
-    color: black;
-    font-weight: 600;
-    margin: 2px 10px 2px 6px;
-  }
-  
-  .scroll-nav button:hover {
-    color: #28a745; 
-    background-color: greenyellow;
-    color: black;
-  }
-  
-
-  @media(max-width:786px){
-    .scroll-nav ul {
-        gap:8px
-    }
-    .scroll-nav ul button {
-        margin: 0px 0px -25px 1px;
-    }
-  }
+}

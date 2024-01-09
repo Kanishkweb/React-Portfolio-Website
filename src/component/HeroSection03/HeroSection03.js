@@ -1,10 +1,12 @@
 import React from "react";
 import "./HeroSection03.css";
+import useAnimateOnMount from "../AnimateOnMount/animateOnMount";
 
 const HeroSection03 = () => {
+  const { sectionRef, showAnimation } = useAnimateOnMount();
   return (
-    <div className="main" id="section3">
-      <div className="left03">
+    <div className="main" id="section3" ref={sectionRef}>
+      <div className={`left03 ${showAnimation ? "animated" : ""}`}>
         <img alt="skills1" src="Images/skills.jpg" />
         <h1>EDUCATION</h1>
         <p>
@@ -20,7 +22,7 @@ const HeroSection03 = () => {
           <b>Full Stack Web Development form PW Skills</b>
         </p>
       </div>
-      <div className="right03">
+      <div className={`right03  ${showAnimation ? "animated" : ""}`}>
         <h1>SKILLS</h1>
 
         <ul>
